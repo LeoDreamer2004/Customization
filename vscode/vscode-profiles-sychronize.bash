@@ -15,6 +15,7 @@ cp ./settings.json $HOME$other_path
 echo "Copied config[$key] to config[$other_key]"
 done
 
+git add *
 git commit -am "Updated vscode profile $key"
 git push
 

@@ -1,0 +1,407 @@
+{
+    // --------------------------------- VSCode 设置 -------------------------------
+    "editor.formatOnType": true,
+    "editor.cursorBlinking": "smooth",
+    "editor.formatOnPaste": true,
+    "editor.smoothScrolling": true,
+    "editor.cursorSmoothCaretAnimation": "on",
+    "editor.fontSize": 16,
+    "editor.fontFamily": "\"Consolas\",\"Microsoft YaHei\"",
+    "editor.wordWrap": "on",
+    "window.titleBarStyle": "custom",
+    "explorer.confirmDragAndDrop": false,
+    "files.exclude": {
+        "**/__pycache__": true
+    },
+    "vscode_custom_css.imports": [
+        "file:///D:/VSCode/resources/app/out/vs/workbench/vscode-custom.css",
+        "file:///home/leodreamer/.vscode/extensions/brandonkirbyson.vscode-animations-2.0.4/dist/updateHandler.js"
+    ],
+    "files.autoGuessEncoding": true,
+    "workbench.iconTheme": "material-icon-theme",
+    "terminal.integrated.defaultProfile.windows": "PowerShell",
+    // --------------------------------- 代码高亮设置 ------------------------------
+    "editor.tokenColorCustomizations": {
+        "textMateRules": [
+            // Global
+            {
+                "scope": [
+                    "comment",
+                ],
+                "settings": {
+                    "fontStyle": "italic",
+                    "foreground": "#aaaaaa"
+                }
+            }, {
+                "scope": [
+                    "variable.other.constant",
+                ],
+                "settings": {
+                    "foreground": "#4FC1FF",
+                }
+            },
+            {
+                "scope": [
+                    "variable.parameter",
+                ],
+                "settings": {
+                    "foreground": "#f6bca1",
+                },
+            },
+            {
+                "scope": [
+                    "storage.modifier",
+                ],
+                "settings": {
+                    "foreground": "#fc8787"
+                }
+            },
+            // Python
+            {
+                "scope": [
+                    "support.function.magic.python"
+                ],
+                "settings": {
+                    "fontStyle": "italic",
+                    "foreground": "#f5d479",
+                },
+            },
+            {
+                "scope": [
+                    "entity.name.function.decorator.python",
+                    "meta.function.decorator.python"
+                ],
+                "settings": {
+                    "foreground": "#b9aaf3",
+                },
+            },
+            {
+                "scope": [
+                    "entity.name.namespace"
+                ],
+                "settings": {
+                    "foreground": "#84db65",
+                }
+            },
+            // C/Cpp
+            {
+                "scope": [
+                    "variable.other.global.cpp"
+                ],
+                "settings": {
+                    "fontStyle": "bold",
+                    "foreground": "#4ca1d9"
+                }
+            },
+            {
+                "scope": [
+                    "entity.name.function.preprocessor.cpp",
+                    "entity.name.function.preprocessor.c"
+                ],
+                "settings": {
+                    "foreground": "#af67df"
+                }
+            },
+            {
+                "scope": [
+                    "entity.name.namespace.cpp"
+                ],
+                "settings": {
+                    "foreground": "#FF7D7D"
+                }
+            },
+            {
+                "scope": [
+                    "variable.language.this.cpp",
+                    "variable.parameter.function.language.special.self.python",
+                    "variable.parameter.function.language.special.cls.python",
+                ],
+                "settings": {
+                    "fontStyle": "italic",
+                    "foreground": "#b9aaf3",
+                }
+            },
+            {
+                "scope": [
+                    "storage.type.namespace.directive.cpp"
+                ],
+                "settings": {
+                    "foreground": "#C586C0"
+                }
+            },
+            // Java
+            {
+                "scope": [
+                    "storage.type.primitive.java"
+                ],
+                "settings": {
+                    "fontStyle": "",
+                    "foreground": "#569CD6"
+                }
+            },
+            // HTML
+            {
+                "scope": [
+                    "entity.other.keyframe-offset"
+                ],
+                "settings": {
+                    "foreground": "#68dfd5"
+                }
+            },
+            // LaTeX
+            {
+                "scope": [
+                    "punctuation.math.operator.tex"
+                ],
+                "settings": {
+                    "foreground": "#dacc93",
+                }
+            },
+            {
+                "scope": [
+                    "punctuation.definition.string.begin",
+                    "punctuation.definition.string.end",
+                ],
+                "settings": {
+                    "foreground": "#eeb84a",
+                }
+            },
+            {
+                "scope": [
+                    "support.class.math.block.tex",
+                    "support.class.math.block.environment.latex"
+                ],
+                "settings": {
+                    "foreground": "#9CDCFE",
+                }
+            },
+            {
+                "scope": [
+                    "meta.attribute.rust"
+                ],
+                "settings": {
+                    "foreground": "#e5a4dd",
+                }
+            },
+            {
+                "scope": [
+                    "entity.name.function.preprocessor"
+                ],
+                "settings": {
+                    "foreground": "#af67df",
+                }
+            },
+            // SQL
+            {
+                "scope": [
+                    "source.sql"
+                ],
+                "settings": {
+                    "foreground": "#9CDCFE",
+                }
+            }
+        ]
+    },
+    // --------------------------------- 语言环境 ------------------------------
+    // C/Cpp
+    "C_Cpp.clang_format_style": "{BasedOnStyle: Chromium, IndentWidth: 4}",
+    // Python
+    "python.terminal.executeInFileDir": true,
+    "python.analysis.autoImportCompletions": true,
+    // LaTeX
+    "latex-workshop.latex.tools": [
+        {
+            // 编译工具和命令
+            "name": "xelatex",
+            "command": "xelatex",
+            "args": [
+                "-synctex=1",
+                "-interaction=nonstopmode",
+                "-file-line-error",
+                "-pdf",
+                "%DOCFILE%"
+            ]
+        },
+        {
+            "name": "pdflatex",
+            "command": "pdflatex",
+            "args": [
+                "-synctex=1",
+                "-interaction=nonstopmode",
+                "-file-line-error",
+                "%DOCFILE%"
+            ]
+        },
+        {
+            "name": "bibtex",
+            "command": "bibtex",
+            "args": [
+                "%DOCFILE%"
+            ]
+        }
+    ],
+    "latex-workshop.latex.recipes": [
+        {
+            "name": "xelatex",
+            "tools": [
+                "xelatex"
+            ],
+        },
+        {
+            "name": "pdflatex",
+            "tools": [
+                "pdflatex"
+            ]
+        },
+        {
+            "name": "xe->bib->xe->xe",
+            "tools": [
+                "xelatex",
+                "bibtex",
+                "xelatex",
+                "xelatex"
+            ]
+        },
+        {
+            "name": "pdf->bib->pdf->pdf",
+            "tools": [
+                "pdflatex",
+                "bibtex",
+                "pdflatex",
+                "pdflatex"
+            ]
+        }
+    ],
+    "latex-workshop.latex.autoClean.run": "onBuilt",
+    "latex-workshop.latex.clean.fileTypes": [
+        "*.aux",
+        "*.bbl",
+        "*.blg",
+        "*.idx",
+        "*.ind",
+        "*.lof",
+        "*.lot",
+        "*.out",
+        "*.toc",
+        "*.acn",
+        "*.acr",
+        "*.alg",
+        "*.glg",
+        "*.glo",
+        "*.gls",
+        "*.ist",
+        "*.fls",
+        "*.log",
+        "*.fdb_latexmk"
+    ],
+    // --------------------------------- 格式化设置 ------------------------------
+    "[python]": {
+        "editor.defaultFormatter": "ms-python.black-formatter"
+    },
+    "[sql]": {
+        "editor.defaultFormatter": "inferrinizzard.prettier-sql-vscode"
+    },
+    // --------------------------------- 插件设置 ------------------------------
+    // code-runner
+    "code-runner.runInTerminal": true,
+    "code-runner.saveFileBeforeRun": true,
+    "code-runner.fileDirectoryAsCwd": true,
+    "code-runner.executorMap": {
+        "javascript": "node",
+        "java": "cd $dir && javac $fileName && java $fileNameWithoutExt",
+        // delete the .exe file after run
+        "c": "cd $dir && gcc $fileName -Wall -Wextra -O2 -o $fileNameWithoutExt && $dir$fileNameWithoutExt && del $dir$fileNameWithoutExt.exe",
+        "zig": "zig run",
+        "cpp": "cd $dir && g++ $fileName -Wall -Wextra -O2 -o $fileNameWithoutExt && $dir$fileNameWithoutExt && del $dir$fileNameWithoutExt.exe",
+        "objective-c": "cd $dir && gcc -framework Cocoa $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt",
+        "php": "php",
+        "python": "cd $dir && python -u $fileName",
+        "perl": "perl",
+        "perl6": "perl6",
+        "ruby": "ruby",
+        "go": "go run",
+        "lua": "lua",
+        "groovy": "groovy",
+        "powershell": "powershell -ExecutionPolicy ByPass -File",
+        "bat": "cmd /c",
+        "shellscript": "bash",
+        "fsharp": "fsi",
+        "csharp": "scriptcs",
+        "vbscript": "cscript //Nologo",
+        "typescript": "ts-node",
+        "coffeescript": "coffee",
+        "scala": "scala",
+        "swift": "swift",
+        "julia": "julia",
+        "crystal": "crystal",
+        "ocaml": "ocaml",
+        "r": "Rscript",
+        "applescript": "osascript",
+        "clojure": "lein exec",
+        "haxe": "haxe --cwd $dirWithoutTrailingSlash --run $fileNameWithoutExt",
+        "rust": "cd $dir && rustc $fileName && $dir$fileNameWithoutExt",
+        "racket": "racket",
+        "scheme": "csi -script",
+        "ahk": "autohotkey",
+        "autoit": "autoit3",
+        "dart": "dart",
+        "pascal": "cd $dir && fpc $fileName && $dir$fileNameWithoutExt",
+        "d": "cd $dir && dmd $fileName && $dir$fileNameWithoutExt",
+        "haskell": "runghc",
+        "nim": "nim compile --verbosity:0 --hints:off --run",
+        "lisp": "sbcl --script",
+        "kit": "kitc --run",
+        "v": "v run",
+        "sass": "sass --style expanded",
+        "scss": "scss --style expanded",
+        "less": "cd $dir && lessc $fileName $fileNameWithoutExt.css",
+        "FortranFreeForm": "cd $dir && gfortran $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt",
+        "fortran-modern": "cd $dir && gfortran $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt",
+        "fortran_fixed-form": "cd $dir && gfortran $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt",
+        "fortran": "cd $dir && gfortran $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt",
+        "sml": "cd $dir && sml $fileName",
+        "mojo": "mojo run"
+    },
+    // jupyter
+    "jupyter.themeMatplotlibPlots": true,
+    "notebook.markup.fontSize": 16,
+    "jupyter.widgetScriptSources": [
+        "jsdelivr.com",
+        "unpkg.com"
+    ],
+    // git
+    "git.suggestSmartCommit": false,
+    // markdown
+    "markdown-preview-enhanced.previewTheme": "github-dark.css",
+    "markdown-preview-enhanced.chromePath": "C:\\Program Files (x86)\\Microsoft\\Edge\\Application\\msedge.exe",
+    "markdown-preview-enhanced.revealjsTheme": "none.css",
+    "markdown-preview-enhanced.codeBlockTheme": "github-dark.css",
+    "markdown-preview-enhanced.enablePreviewZenMode": true,
+    "markdownlint.config": {
+        "default": true,
+        "MD024": false,
+        "MD033": false,
+        "MD041": false,
+        "MD040": false,
+    },
+    // flake8
+    "flake8.args": [
+        "--max-line-length=150",
+        "--ignore=E266,F403,F405,W503,E203,E704,F401"
+    ],
+    // autoDocstring
+    "autoDocstring.docstringFormat": "pep257",
+    // copilot
+    "github.copilot.enable": {
+        "*": true,
+        "plaintext": false,
+        "markdown": true,
+        "scminput": false
+    },
+    "github.copilot.editor.enableAutoCompletions": true,
+    "window.zoomLevel": 1,
+    "workbench.colorTheme": "Default Dark+",
+    "settingsSync.ignoredSettings": [],
+    "git.confirmSync": false,
+    "jupyter.askForKernelRestart": false,
+}
