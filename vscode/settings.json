@@ -204,7 +204,7 @@
     },
     // --------------------------------- 语言环境 ------------------------------
     // C/Cpp
-    "C_Cpp.clang_format_style": "{BasedOnStyle: Chromium, IndentWidth: 4}",
+    "C_Cpp.clang_format_style": "{BasedOnStyle: LLVM, IndentWidth: 4, AccessModifierOffset: -4, ColumnLimit: 80}",
     // Python
     "python.terminal.executeInFileDir": true,
     "python.analysis.autoImportCompletions": true,
