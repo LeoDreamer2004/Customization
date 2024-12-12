@@ -23,7 +23,8 @@ echo -e "Commit changes to git? \e[1m(y/n)\e[0m"
 read answer
 if [ "$answer" != "${answer#[Yy]}" ] ;then
 echo -e "\e[1m\e[36mCommitting changes to git... \e[0m"
-git -C $cur_path add * 
+echo $cur_path
+git -C $cur_path add .
 git -C $cur_path commit -am "Updated vscode profile $key"
 git -C $cur_path push 
 fi
