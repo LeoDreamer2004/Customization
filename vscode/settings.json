@@ -296,8 +296,15 @@
     ],
     // --------------------------------- 格式化设置 ------------------------------
     "[python]": {
-        "editor.defaultFormatter": "ms-python.black-formatter"
+        "editor.defaultFormatter": "ms-python.autopep8"
     },
+    "flake8.args": [
+        "--max-line-length=150",
+        "--ignore=E266,F403,F405,W503,E203,E704,F401"
+    ],
+    "autopep8.args": [
+        "--max-line-length=150"
+    ],
     "[sql]": {
         "editor.defaultFormatter": "inferrinizzard.prettier-sql-vscode"
     },
@@ -384,11 +391,6 @@
         "MD041": false,
         "MD040": false,
     },
-    // flake8
-    "flake8.args": [
-        "--max-line-length=150",
-        "--ignore=E266,F403,F405,W503,E203,E704,F401"
-    ],
     // autoDocstring
     "autoDocstring.docstringFormat": "pep257",
     // copilot
