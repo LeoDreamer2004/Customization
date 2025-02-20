@@ -317,9 +317,9 @@
         "javascript": "node",
         "java": "cd $dir && javac $fileName && java $fileNameWithoutExt",
         // delete the .exe file after run
-        "c": "cd $dir && gcc $fileName -Wall -Wextra -O2 -o $fileNameWithoutExt && $dir$fileNameWithoutExt && del $dir$fileNameWithoutExt.exe",
+        "c": "cd $dir && gcc $fileName -Wall -Wextra -O2 -o $fileNameWithoutExt && $dir$fileNameWithoutExt && rm $dir$fileNameWithoutExt.exe",
         "zig": "zig run",
-        "cpp": "cd $dir && g++ $fileName -Wall -Wextra -O2 -o $fileNameWithoutExt && $dir$fileNameWithoutExt && del $dir$fileNameWithoutExt.exe",
+        "cpp": "cd $dir && g++ $fileName -Wall -Wextra -O2 -o $fileNameWithoutExt && $dir$fileNameWithoutExt && rm $dir$fileNameWithoutExt.exe",
         "objective-c": "cd $dir && gcc -framework Cocoa $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt",
         "php": "php",
         "python": "cd $dir && python -u $fileName",
