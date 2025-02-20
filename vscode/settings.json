@@ -272,7 +272,7 @@
             ]
         }
     ],
-    "latex-workshop.latex.autoClean.run": "onBuilt",
+    // "latex-workshop.latex.autoClean.run": "onBuilt",
     "latex-workshop.latex.clean.fileTypes": [
         "*.aux",
         "*.bbl",
@@ -299,11 +299,11 @@
         "editor.defaultFormatter": "ms-python.autopep8"
     },
     "flake8.args": [
-        "--max-line-length=150",
+        "--max-line-length=100",
         "--ignore=E266,F403,F405,W503,E203,E704,F401"
     ],
     "autopep8.args": [
-        "--max-line-length=150"
+        "--max-line-length=100"
     ],
     "[sql]": {
         "editor.defaultFormatter": "inferrinizzard.prettier-sql-vscode"
