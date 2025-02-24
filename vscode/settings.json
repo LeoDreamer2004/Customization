@@ -104,14 +104,6 @@
             },
             {
                 "scope": [
-                    "entity.name.namespace.cpp"
-                ],
-                "settings": {
-                    "foreground": "#FF7D7D"
-                }
-            },
-            {
-                "scope": [
                     "variable.language.this.cpp",
                     "variable.parameter.function.language.special.self.python",
                     "variable.parameter.function.language.special.cls.python",
@@ -188,7 +180,8 @@
                     "entity.name.function.preprocessor"
                 ],
                 "settings": {
-                    "foreground": "#af67df",
+                    "foreground": "#D96A91",
+                    "fontStyle": "bold"
                 }
             },
             // SQL
@@ -317,9 +310,9 @@
         "javascript": "node",
         "java": "cd $dir && javac $fileName && java $fileNameWithoutExt",
         // delete the .exe file after run
-        "c": "cd $dir && gcc $fileName -Wall -Wextra -O2 -o $fileNameWithoutExt && $dir$fileNameWithoutExt && rm $dir$fileNameWithoutExt.exe",
+        "c": "cd $dir && gcc $fileName -Wall -Wextra -O2 -o $fileNameWithoutExt && $dir$fileNameWithoutExt && rm $dir$fileNameWithoutExt",
         "zig": "zig run",
-        "cpp": "cd $dir && g++ $fileName -Wall -Wextra -O2 -o $fileNameWithoutExt && $dir$fileNameWithoutExt && rm $dir$fileNameWithoutExt.exe",
+        "cpp": "cd $dir && g++ $fileName -Wall -Wextra -O2 -o $fileNameWithoutExt && $dir$fileNameWithoutExt && rm $dir$fileNameWithoutExt",
         "objective-c": "cd $dir && gcc -framework Cocoa $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt",
         "php": "php",
         "python": "cd $dir && python -u $fileName",
