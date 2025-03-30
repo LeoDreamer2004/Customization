@@ -32,7 +32,8 @@
                     "fontStyle": "italic",
                     "foreground": "#aaaaaa"
                 }
-            }, {
+            },
+            {
                 "scope": [
                     "variable.other.constant",
                 ],
@@ -310,8 +311,11 @@
         "javascript": "node",
         "java": "cd $dir && javac $fileName && java $fileNameWithoutExt",
         // delete the .exe file after run
+        // windows version
+        // "c": "cd $dir && gcc $fileName -Wall -Wextra -O2 -o $fileNameWithoutExt && $dir$fileNameWithoutExt && del $dir$fileNameWithoutExt.exe",
         "c": "cd $dir && gcc $fileName -Wall -Wextra -O2 -o $fileNameWithoutExt && $dir$fileNameWithoutExt && rm $dir$fileNameWithoutExt",
         "zig": "zig run",
+        // "cpp": "cd $dir && g++ $fileName -Wall -Wextra -O2 -o $fileNameWithoutExt && $dir$fileNameWithoutExt && del $dir$fileNameWithoutExt.exe",
         "cpp": "cd $dir && g++ $fileName -Wall -Wextra -O2 -o $fileNameWithoutExt && $dir$fileNameWithoutExt && rm $dir$fileNameWithoutExt",
         "objective-c": "cd $dir && gcc -framework Cocoa $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt",
         "php": "php",
@@ -369,8 +373,10 @@
         "jsdelivr.com",
         "unpkg.com"
     ],
+    "jupyter.askForKernelRestart": false,
     // git
     "git.suggestSmartCommit": false,
+    "git.confirmSync": false,
     // markdown
     "markdown-preview-enhanced.previewTheme": "github-dark.css",
     "markdown-preview-enhanced.chromePath": "C:\\Program Files (x86)\\Microsoft\\Edge\\Application\\msedge.exe",
@@ -396,7 +402,4 @@
     "github.copilot.editor.enableAutoCompletions": true,
     "window.zoomLevel": 1,
     "workbench.colorTheme": "Default Dark+",
-    "settingsSync.ignoredSettings": [],
-    "git.confirmSync": false,
-    "jupyter.askForKernelRestart": false,
 }
