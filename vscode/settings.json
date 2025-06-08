@@ -7,6 +7,7 @@
     "editor.cursorSmoothCaretAnimation": "on",
     "editor.fontSize": 16,
     "editor.fontFamily": "\"Consolas\",\"Microsoft YaHei\"",
+    "terminal.integrated.fontFamily": "\"Hack Nerd Font\"",
     "editor.wordWrap": "on",
     "window.titleBarStyle": "custom",
     "explorer.confirmDragAndDrop": false,
@@ -379,7 +380,6 @@
     "git.confirmSync": false,
     // markdown
     "markdown-preview-enhanced.previewTheme": "github-dark.css",
-    "markdown-preview-enhanced.chromePath": "C:\\Program Files (x86)\\Microsoft\\Edge\\Application\\msedge.exe",
     "markdown-preview-enhanced.revealjsTheme": "none.css",
     "markdown-preview-enhanced.codeBlockTheme": "github-dark.css",
     "markdown-preview-enhanced.enablePreviewZenMode": true,
@@ -389,6 +389,7 @@
         "MD033": false,
         "MD041": false,
         "MD040": false,
+        "MD026": false,
     },
     // autoDocstring
     "autoDocstring.docstringFormat": "pep257",
