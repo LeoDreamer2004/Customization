@@ -297,6 +297,7 @@
     "autopep8.args": [
         "--max-line-length=100"
     ],
+    "latex-workshop.formatting.latex": "latexindent",
     "[sql]": {
         "editor.defaultFormatter": "inferrinizzard.prettier-sql-vscode"
     },
@@ -427,5 +428,24 @@
         "*.db3": "${capture}.${extname}-*",
         "*.sdb": "${capture}.${extname}-*",
         "*.s3db": "${capture}.${extname}-*"
+    },
+    "terminal.integrated.suggest.enabled": false,
+    // background
+    "background.enabled": true,
+    "background.editor": {
+        "useFront": true,
+        "style": {
+            "background-position": "98% 100%",
+            "background-size": "30%",
+            "opacity": 0.1
+        },
+        "styles": [
+            {},
+            {},
+            {}
+        ],
+        "images": ["file:///home/leodreamer/Pictures/anime/vsc.png"],
+        "interval": 0,
+        "random": false
     },
 }
