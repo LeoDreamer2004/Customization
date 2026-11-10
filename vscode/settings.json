@@ -7,7 +7,8 @@
     "editor.cursorSmoothCaretAnimation": "on",
     "editor.fontSize": 15,
     "editor.lineHeight": 1.4,
-    "editor.fontFamily": "\"Monaco\", \"Consolas\",\"Microsoft YaHei\"",
+    "editor.fontFamily": "\"Maple Mono NF CN\", \"Monaco\", \"Consolas\",\"Microsoft YaHei\"",
+    "editor.fontLigatures": true,
     "terminal.integrated.fontFamily": "\"Hack Nerd Font\"",
     "editor.wordWrap": "on",
     "explorer.confirmDragAndDrop": false,
@@ -29,6 +30,39 @@
                 "settings": {
                     "fontStyle": "italic",
                     "foreground": "#aaaaaa"
+                }
+            },
+            {
+                "scope": [
+                    "punctuation.definition.string.begin",
+                    "punctuation.definition.string.end",
+                ],
+                "settings": {
+                    "foreground": "#eeb84a",
+                }
+            },
+            {
+                "scope": [
+                    "variable.other"
+                ],
+                "settings": {
+                    "foreground": "#92bfff",
+                }
+            },
+            {
+                "scope": [
+                    "string"
+                ],
+                "settings": {
+                    "foreground": "#cc9068",
+                }
+            },
+            {
+                "scope": [
+                    "entity.name.function"
+                ],
+                "settings": {
+                    "foreground": "#dcdcaa",
                 }
             },
             {
@@ -146,15 +180,6 @@
                 ],
                 "settings": {
                     "foreground": "#dacc93",
-                }
-            },
-            {
-                "scope": [
-                    "punctuation.definition.string.begin",
-                    "punctuation.definition.string.end",
-                ],
-                "settings": {
-                    "foreground": "#eeb84a",
                 }
             },
             {
@@ -288,7 +313,7 @@
     ],
     // --------------------------------- 格式化设置 ------------------------------
     "[python]": {
-        "editor.defaultFormatter": "ms-python.autopep8"
+        "editor.defaultFormatter": "ms-python.black-formatter"
     },
     "flake8.args": [
         "--max-line-length=100",
@@ -311,10 +336,10 @@
         "java": "cd $dir && javac $fileName && java $fileNameWithoutExt",
         // windows version
         // "c": "cd $dir && gcc $fileName -Wall -Wextra -O2 -o $fileNameWithoutExt && $dir$fileNameWithoutExt && del $dir$fileNameWithoutExt.exe",
-        "c": "cd $dir && gcc $fileName -Wall -Wextra -O2 -o $fileNameWithoutExt && $dir$fileNameWithoutExt && rm $dir$fileNameWithoutExt",
+        "c": "cd $dir && gcc $fileName -Wall -Wextra -lm -O2 -o $fileNameWithoutExt && $dir$fileNameWithoutExt && rm $dir$fileNameWithoutExt",
         "zig": "zig run",
         // "cpp": "cd $dir && g++ $fileName -Wall -Wextra -O2 -o $fileNameWithoutExt && $dir$fileNameWithoutExt && del $dir$fileNameWithoutExt.exe",
-        "cpp": "cd $dir && g++ $fileName -Wall -Wextra -O2 -o $fileNameWithoutExt && $dir$fileNameWithoutExt && rm $dir$fileNameWithoutExt",
+        "cpp": "cd $dir && g++ $fileName -Wall -Wextra -lm -O2 -o $fileNameWithoutExt && $dir$fileNameWithoutExt && rm $dir$fileNameWithoutExt",
         "objective-c": "cd $dir && gcc -framework Cocoa $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt",
         "php": "php",
         "python": "cd $dir && python -u $fileName",
@@ -398,7 +423,6 @@
         "scminput": false
     },
     "github.copilot.editor.enableAutoCompletions": true,
-    "workbench.colorTheme": "Default Dark+",
     "workbench.layoutControl.enabled": false,
     "[dockercompose]": {
         "editor.insertSpaces": true,
@@ -429,7 +453,6 @@
         "*.sdb": "${capture}.${extname}-*",
         "*.s3db": "${capture}.${extname}-*"
     },
-    "terminal.integrated.suggest.enabled": false,
     // background
     "background.enabled": true,
     "background.editor": {
@@ -444,8 +467,22 @@
             {},
             {}
         ],
-        "images": ["file:///home/leodreamer/Pictures/anime/vsc.png"],
+        "images": [
+            "file:///home/leodreamer/Pictures/anime/vsc.png"
+        ],
         "interval": 0,
         "random": false
     },
+    "github.copilot.nextEditSuggestions.enabled": true,
+    "claudeCode.preferredLocation": "panel",
+    "dup-detector.serverPath": "/home/leodreamer/.cargo/bin/dup-detector",
+    "todo-tree.ripgrep.ripgrep": "/usr/bin/rg",
+    "yaml.disableSchemaDetection": [
+        "**/.github/workflows/*.yml",
+        "**/.github/workflows/*.yaml",
+        "**/.gitea/workflows/*.yml",
+        "**/.gitea/workflows/*.yaml",
+        "**/.forgejo/workflows/*.yml",
+        "**/.forgejo/workflows/*.yaml"
+    ],
 }
